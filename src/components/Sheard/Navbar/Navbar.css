@@ -3,7 +3,16 @@
     text-decoration: underline;
     
 }
+.images {
+    background-image: url("https://i.postimg.cc/RCQzS929/two-young-businessman-having-successful-meeting-restaurant.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-size:contain; */
+    background-position-y: center;
+    background-color: rgb(31, 42, 56)
 
+    /* opacity: -1; */
+}
 li {
     margin-right: 20px;
     font-weight: 500
