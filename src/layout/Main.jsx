@@ -1,15 +1,16 @@
 import { Outlet } from "react-router";
-import Navbar from "../components/Sheard/Navbar"
-import Footer from "../components/Sheard/Footer"
+import Navbar from "../components/Sheard/Navbar/Navbar";
+import Footer from "../components/Sheard/Footer/Footer"
+
 
 const Main = () => {
     return (
         <div>
-            <div className="max-w-7xl mx-auto">
-                <Navbar></Navbar>
+            {/* <div className="max-w-7xl mx-auto"> */}
+               <Navbar></Navbar>
                 <Outlet></Outlet>
                 <Footer></Footer>
-            </div>
+            {/* </div> */}
         </div>
     );
 };

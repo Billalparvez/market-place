@@ -1,0 +1,10 @@
+.active {
+    color: #63B916;
+    text-decoration: underline;
+    
+}
+
+li {
+    margin-right: 20px;
+    font-weight: 500
+}
