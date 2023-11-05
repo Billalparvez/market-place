@@ -16,8 +16,6 @@ const Bannar = () => {
                         <label className="font-bold input-group flex-col md:flex-row border-2 border-solid">
                             <input type="text" placeholder="Job Title" className=" input input-bordered hidden md:inline-block bg-transparent" />
                             <input type="text" placeholder="City,State Or ZipCode" className=" border-x-3 border-gray-400 input input-bordered   bg-transparent" />
-                            {/* <input type="text" placeholder="mohammad" className="input  bg-transparent" />
-                             */}
                             <div className="form-control">
                                 <div className="input-group  hidden md:inline-block">
                                     <select className="select select-bordered bg-transparent ">
