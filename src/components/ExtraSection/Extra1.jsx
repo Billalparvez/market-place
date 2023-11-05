@@ -11,13 +11,14 @@ const Extra1 = () => {
             {/* <!-- Swiper --> */}
             <swiper-container className="mySwiper " pagination="true" pagination-clickable="true" space-between="30"
                 centered-slides="true" autoplay-delay="2500" autoplay-disable-on-interaction="false">
+                {/* single-pages */}
                 <swiper-slide>
                     <div className="grid grid-cols-1 md:grid-cols-3 my-10  gap-3">
-                          {/* single-card */}
-                        <div className="card bg-base-100  border-2 rounded-3xl">
+                        {/* single-card */}
+                        <div className="card bg-base-500  border-2 rounded-3xl">
                             <figure className="px-10 pt-10">
-                                <img src="https://i.postimg.cc/CLzGj6nx/3.jpg" alt="Shoes" className="rounded-full w-64 h-64 border-2 border-solid border-shadow-xl" />
-                            </figure>                       
+                                <img src="https://i.postimg.cc/CLzGj6nx/3.jpg" alt="Shoes" className="rounded-full w-32 h-32 md:w-40 md:h-40 lg:w-64 lg:h-64 border-2 border-solid border-shadow-xl" />
+                            </figure>
                             <div className="card-body items-center text-center">
                                 <h2 className="card-title hover:text-[#63B916]">Alex Smite!</h2>
                                 <p className="font-bold text-gray-400">Font-End-Developer</p>
@@ -44,11 +45,11 @@ const Extra1 = () => {
                                 </div>
                             </div>
                         </div>
-                          {/* single-card */}
-                        <div className="card bg-base-100  border-2 rounded-3xl">
+                        {/* single-card */}
+                        <div className="card bg-base-500  border-2 rounded-3xl">
                             <figure className="px-10 pt-10">
-                                <img src="https://i.postimg.cc/CLzGj6nx/3.jpg" alt="Shoes" className="rounded-full w-64 h-64 border-2 border-solid border-shadow-xl" />
-                            </figure>                       
+                                <img src="https://i.postimg.cc/CLzGj6nx/3.jpg" alt="Shoes" className="rounded-full w-32 h-32 md:w-40 md:h-40 lg:w-64 lg:h-64 border-2 border-solid border-shadow-xl" />
+                            </figure>
                             <div className="card-body items-center text-center">
                                 <h2 className="card-title hover:text-[#63B916]">Alex Smite!</h2>
                                 <p className="font-bold text-gray-400">Font-End-Developer</p>
@@ -57,9 +58,9 @@ const Extra1 = () => {
                                     <input type="radio" name="rating-10" className="rating-hidden" />
                                     <input type="radio" name="rating-10" className="bg-orange-400 mask mask-star-2 mask-half-1" />
                                     <input type="radio" name="rating-10" className="bg-orange-400 mask mask-star-2 mask-half-2" />
-                                    <input type="radio" name="rating-10" className="bg-orange-400 mask mask-star-2 mask-half-1"  />
+                                    <input type="radio" name="rating-10" className="bg-orange-400 mask mask-star-2 mask-half-1" />
                                     <input type="radio" name="rating-10" className="bg-orange-400 mask mask-star-2 mask-half-2" />
-                                    <input type="radio" name="rating-10" className="bg-orange-400 mask mask-star-2 mask-half-1" checked/>
+                                    <input type="radio" name="rating-10" className="bg-orange-400 mask mask-star-2 mask-half-1" checked />
                                     <input type="radio" name="rating-10" className="bg-orange-400 mask mask-star-2 mask-half-2" />
                                     <input type="radio" name="rating-10" className="bg-orange-400 mask mask-star-2 mask-half-1" />
                                     <input type="radio" name="rating-10" className="bg-orange-400 mask mask-star-2 mask-half-2" />
@@ -75,11 +76,11 @@ const Extra1 = () => {
                                 </div>
                             </div>
                         </div>
-                          {/* single-card */}
-                        <div className="card bg-base-100  border-2 rounded-3xl">
+                        {/* single-card */}
+                        <div className="card bg-base-500  border-2 rounded-3xl">
                             <figure className="px-10 pt-10">
-                                <img src="https://i.postimg.cc/CLzGj6nx/3.jpg" alt="Shoes" className="rounded-full w-64 h-64 border-2 border-solid border-shadow-xl" />
-                            </figure>                       
+                                <img src="https://i.postimg.cc/CLzGj6nx/3.jpg" alt="Shoes" className="rounded-full w-32 h-32 md:w-40 md:h-40 lg:w-64 lg:h-64 border-2 border-solid border-shadow-xl" />
+                            </figure>
                             <div className="card-body items-center text-center">
                                 <h2 className="card-title hover:text-[#63B916]">Alex Smite!</h2>
                                 <p className="font-bold text-gray-400">Font-End-Developer</p>
@@ -88,9 +89,9 @@ const Extra1 = () => {
                                     <input type="radio" name="rating-10" className="rating-hidden" />
                                     <input type="radio" name="rating-10" className="bg-orange-400 mask mask-star-2 mask-half-1" />
                                     <input type="radio" name="rating-10" className="bg-orange-400 mask mask-star-2 mask-half-2" />
-                                    <input type="radio" name="rating-10" className="bg-orange-400 mask mask-star-2 mask-half-1"  />
+                                    <input type="radio" name="rating-10" className="bg-orange-400 mask mask-star-2 mask-half-1" />
                                     <input type="radio" name="rating-10" className="bg-orange-400 mask mask-star-2 mask-half-2" />
-                                    <input type="radio" name="rating-10" className="bg-orange-400 mask mask-star-2 mask-half-1" checked/>
+                                    <input type="radio" name="rating-10" className="bg-orange-400 mask mask-star-2 mask-half-1" checked />
                                     <input type="radio" name="rating-10" className="bg-orange-400 mask mask-star-2 mask-half-2" />
                                     <input type="radio" name="rating-10" className="bg-orange-400 mask mask-star-2 mask-half-1" />
                                     <input type="radio" name="rating-10" className="bg-orange-400 mask mask-star-2 mask-half-2" />
@@ -105,16 +106,17 @@ const Extra1 = () => {
                                         className="border-2 border-solid p-1 fill-current text-gray-400 hover:bg-[#63B916] hover:text-white  rounded-full "><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path></svg></Link>
                                 </div>
                             </div>
-                        </div>           
+                        </div>
                     </div>
                 </swiper-slide>
+                {/* single-pages */}
                 <swiper-slide>
                     <div className="grid grid-cols-1 md:grid-cols-3 my-10  gap-3">
-                          {/* single-card */}
-                        <div className="card bg-base-100  border-2 rounded-3xl">
+                        {/* single-card */}
+                        <div className="card bg-base-500  border-2 rounded-3xl">
                             <figure className="px-10 pt-10">
-                                <img src="https://i.postimg.cc/CLzGj6nx/3.jpg" alt="Shoes" className="rounded-full w-64 h-64 border-2 border-solid border-shadow-xl" />
-                            </figure>                       
+                                <img src="https://i.postimg.cc/CLzGj6nx/3.jpg" alt="Shoes" className="rounded-full w-32 h-32 md:w-40 md:h-40 lg:w-64 lg:h-64 border-2 border-solid border-shadow-xl" />
+                            </figure>
                             <div className="card-body items-center text-center">
                                 <h2 className="card-title hover:text-[#63B916]">Alex Smite!</h2>
                                 <p className="font-bold text-gray-400">Font-End-Developer</p>
@@ -141,11 +143,11 @@ const Extra1 = () => {
                                 </div>
                             </div>
                         </div>
-                          {/* single-card */}
-                        <div className="card bg-base-100  border-2 rounded-3xl">
+                        {/* single-card */}
+                        <div className="card bg-base-500  border-2 rounded-3xl">
                             <figure className="px-10 pt-10">
-                                <img src="https://i.postimg.cc/CLzGj6nx/3.jpg" alt="Shoes" className="rounded-full w-64 h-64 border-2 border-solid border-shadow-xl" />
-                            </figure>                       
+                                <img src="https://i.postimg.cc/CLzGj6nx/3.jpg" alt="Shoes" className="rounded-full w-32 h-32 md:w-40 md:h-40 lg:w-64 lg:h-64 border-2 border-solid border-shadow-xl" />
+                            </figure>
                             <div className="card-body items-center text-center">
                                 <h2 className="card-title hover:text-[#63B916]">Alex Smite!</h2>
                                 <p className="font-bold text-gray-400">Font-End-Developer</p>
@@ -154,9 +156,9 @@ const Extra1 = () => {
                                     <input type="radio" name="rating-10" className="rating-hidden" />
                                     <input type="radio" name="rating-10" className="bg-orange-400 mask mask-star-2 mask-half-1" />
                                     <input type="radio" name="rating-10" className="bg-orange-400 mask mask-star-2 mask-half-2" />
-                                    <input type="radio" name="rating-10" className="bg-orange-400 mask mask-star-2 mask-half-1"  />
+                                    <input type="radio" name="rating-10" className="bg-orange-400 mask mask-star-2 mask-half-1" />
                                     <input type="radio" name="rating-10" className="bg-orange-400 mask mask-star-2 mask-half-2" />
-                                    <input type="radio" name="rating-10" className="bg-orange-400 mask mask-star-2 mask-half-1" checked/>
+                                    <input type="radio" name="rating-10" className="bg-orange-400 mask mask-star-2 mask-half-1" checked />
                                     <input type="radio" name="rating-10" className="bg-orange-400 mask mask-star-2 mask-half-2" />
                                     <input type="radio" name="rating-10" className="bg-orange-400 mask mask-star-2 mask-half-1" />
                                     <input type="radio" name="rating-10" className="bg-orange-400 mask mask-star-2 mask-half-2" />
@@ -172,11 +174,11 @@ const Extra1 = () => {
                                 </div>
                             </div>
                         </div>
-                          {/* single-card */}
-                        <div className="card bg-base-100  border-2 rounded-3xl">
+                        {/* single-card */}
+                        <div className="card bg-base-500  border-2 rounded-3xl">
                             <figure className="px-10 pt-10">
-                                <img src="https://i.postimg.cc/CLzGj6nx/3.jpg" alt="Shoes" className="rounded-full w-64 h-64 border-2 border-solid border-shadow-xl" />
-                            </figure>                       
+                                <img src="https://i.postimg.cc/CLzGj6nx/3.jpg" alt="Shoes" className="rounded-full w-32 h-32 md:w-40 md:h-40 lg:w-64 lg:h-64 border-2 border-solid border-shadow-xl" />
+                            </figure>
                             <div className="card-body items-center text-center">
                                 <h2 className="card-title hover:text-[#63B916]">Alex Smite!</h2>
                                 <p className="font-bold text-gray-400">Font-End-Developer</p>
@@ -185,9 +187,9 @@ const Extra1 = () => {
                                     <input type="radio" name="rating-10" className="rating-hidden" />
                                     <input type="radio" name="rating-10" className="bg-orange-400 mask mask-star-2 mask-half-1" />
                                     <input type="radio" name="rating-10" className="bg-orange-400 mask mask-star-2 mask-half-2" />
-                                    <input type="radio" name="rating-10" className="bg-orange-400 mask mask-star-2 mask-half-1"  />
+                                    <input type="radio" name="rating-10" className="bg-orange-400 mask mask-star-2 mask-half-1" />
                                     <input type="radio" name="rating-10" className="bg-orange-400 mask mask-star-2 mask-half-2" />
-                                    <input type="radio" name="rating-10" className="bg-orange-400 mask mask-star-2 mask-half-1" checked/>
+                                    <input type="radio" name="rating-10" className="bg-orange-400 mask mask-star-2 mask-half-1" checked />
                                     <input type="radio" name="rating-10" className="bg-orange-400 mask mask-star-2 mask-half-2" />
                                     <input type="radio" name="rating-10" className="bg-orange-400 mask mask-star-2 mask-half-1" />
                                     <input type="radio" name="rating-10" className="bg-orange-400 mask mask-star-2 mask-half-2" />
@@ -202,16 +204,17 @@ const Extra1 = () => {
                                         className="border-2 border-solid p-1 fill-current text-gray-400 hover:bg-[#63B916] hover:text-white  rounded-full "><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path></svg></Link>
                                 </div>
                             </div>
-                        </div>           
+                        </div>
                     </div>
                 </swiper-slide>
+                {/* single-pages */}
                 <swiper-slide>
                     <div className="grid grid-cols-1 md:grid-cols-3 my-10  gap-3">
-                          {/* single-card */}
+                        {/* single-card */}
                         <div className="card bg-base-500  border-2 rounded-3xl">
                             <figure className="px-10 pt-10">
-                                <img src="https://i.postimg.cc/CLzGj6nx/3.jpg" alt="Shoes" className="rounded-full w-64 h-64 border-2 border-solid border-shadow-xl" />
-                            </figure>                       
+                                <img src="https://i.postimg.cc/CLzGj6nx/3.jpg" alt="Shoes" className="rounded-full w-32 h-32 md:w-40 md:h-40 lg:w-64 lg:h-64 border-2 border-solid border-shadow-xl" />
+                            </figure>
                             <div className="card-body items-center text-center">
                                 <h2 className="card-title hover:text-[#63B916]">Alex Smite!</h2>
                                 <p className="font-bold text-gray-400">Font-End-Developer</p>
@@ -238,11 +241,11 @@ const Extra1 = () => {
                                 </div>
                             </div>
                         </div>
-                          {/* single-card */}
+                        {/* single-card */}
                         <div className="card bg-base-500  border-2 rounded-3xl">
                             <figure className="px-10 pt-10">
-                                <img src="https://i.postimg.cc/CLzGj6nx/3.jpg" alt="Shoes" className="rounded-full w-64 h-64 border-2 border-solid border-shadow-xl" />
-                            </figure>                       
+                                <img src="https://i.postimg.cc/CLzGj6nx/3.jpg" alt="Shoes" className="rounded-full w-32 h-32 md:w-40 md:h-40 lg:w-64 lg:h-64 border-2 border-solid border-shadow-xl" />
+                            </figure>
                             <div className="card-body items-center text-center">
                                 <h2 className="card-title hover:text-[#63B916]">Alex Smite!</h2>
                                 <p className="font-bold text-gray-400">Font-End-Developer</p>
@@ -251,9 +254,9 @@ const Extra1 = () => {
                                     <input type="radio" name="rating-10" className="rating-hidden" />
                                     <input type="radio" name="rating-10" className="bg-orange-400 mask mask-star-2 mask-half-1" />
                                     <input type="radio" name="rating-10" className="bg-orange-400 mask mask-star-2 mask-half-2" />
-                                    <input type="radio" name="rating-10" className="bg-orange-400 mask mask-star-2 mask-half-1"  />
+                                    <input type="radio" name="rating-10" className="bg-orange-400 mask mask-star-2 mask-half-1" />
                                     <input type="radio" name="rating-10" className="bg-orange-400 mask mask-star-2 mask-half-2" />
-                                    <input type="radio" name="rating-10" className="bg-orange-400 mask mask-star-2 mask-half-1" checked/>
+                                    <input type="radio" name="rating-10" className="bg-orange-400 mask mask-star-2 mask-half-1" checked />
                                     <input type="radio" name="rating-10" className="bg-orange-400 mask mask-star-2 mask-half-2" />
                                     <input type="radio" name="rating-10" className="bg-orange-400 mask mask-star-2 mask-half-1" />
                                     <input type="radio" name="rating-10" className="bg-orange-400 mask mask-star-2 mask-half-2" />
@@ -269,11 +272,11 @@ const Extra1 = () => {
                                 </div>
                             </div>
                         </div>
-                          {/* single-card */}
+                        {/* single-card */}
                         <div className="card bg-base-500  border-2 rounded-3xl">
                             <figure className="px-10 pt-10">
-                                <img src="https://i.postimg.cc/CLzGj6nx/3.jpg" alt="Shoes" className="rounded-full w-64 h-64 border-2 border-solid border-shadow-xl" />
-                            </figure>                       
+                                <img src="https://i.postimg.cc/CLzGj6nx/3.jpg" alt="Shoes" className="rounded-full w-32 h-32 md:w-40 md:h-40 lg:w-64 lg:h-64 border-2 border-solid border-shadow-xl" />
+                            </figure>
                             <div className="card-body items-center text-center">
                                 <h2 className="card-title hover:text-[#63B916]">Alex Smite!</h2>
                                 <p className="font-bold text-gray-400">Font-End-Developer</p>
@@ -282,9 +285,9 @@ const Extra1 = () => {
                                     <input type="radio" name="rating-10" className="rating-hidden" />
                                     <input type="radio" name="rating-10" className="bg-orange-400 mask mask-star-2 mask-half-1" />
                                     <input type="radio" name="rating-10" className="bg-orange-400 mask mask-star-2 mask-half-2" />
-                                    <input type="radio" name="rating-10" className="bg-orange-400 mask mask-star-2 mask-half-1"  />
+                                    <input type="radio" name="rating-10" className="bg-orange-400 mask mask-star-2 mask-half-1" />
                                     <input type="radio" name="rating-10" className="bg-orange-400 mask mask-star-2 mask-half-2" />
-                                    <input type="radio" name="rating-10" className="bg-orange-400 mask mask-star-2 mask-half-1" checked/>
+                                    <input type="radio" name="rating-10" className="bg-orange-400 mask mask-star-2 mask-half-1" checked />
                                     <input type="radio" name="rating-10" className="bg-orange-400 mask mask-star-2 mask-half-2" />
                                     <input type="radio" name="rating-10" className="bg-orange-400 mask mask-star-2 mask-half-1" />
                                     <input type="radio" name="rating-10" className="bg-orange-400 mask mask-star-2 mask-half-2" />
@@ -299,10 +302,13 @@ const Extra1 = () => {
                                         className="border-2 border-solid p-1 fill-current text-gray-400 hover:bg-[#63B916] hover:text-white  rounded-full "><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path></svg></Link>
                                 </div>
                             </div>
-                        </div>           
+                        </div>
                     </div>
                 </swiper-slide>
-              
+
+
+
+
 
 
 
