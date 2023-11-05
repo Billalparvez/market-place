@@ -28,7 +28,7 @@ const Navbar = () => {
                     </div>
                     <div className="flex gap-5 items-center w-full">
                         <img className="w-20 rounded-full" src="https://i.postimg.cc/dV454QDs/rag-dolls-one-blue.jpg" alt="" />
-                        <h1 className=" text-lg md:text-3xl font-bold"><span className="text-[#63B916]">Market</span> places</h1>
+                        <h1 data-aos="fade-left" className=" text-lg md:text-3xl font-bold"><span className="text-[#63B916]">Market</span> places</h1>
                     </div>
                 </div>
                 <div className="navbar-center hidden lg:flex">
