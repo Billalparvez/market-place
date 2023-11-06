@@ -1,20 +1,61 @@
+import axios from "axios";
+import Swal from "sweetalert2";
 
 
 const AddJob = () => {
+    const handleAddJob = e => {
+        e.preventDefault()
+        const form = e.target
+        const email = form.email.value
+        const Job_Title = form.Job_Title.value
+        const Deadline = form.Deadline.value
+        const Description = form.Description.value
+        const Minimum_price = form.Minimum_price.value
+        const Maximum_price = form.Maximum_price.value
+        const category = form.category.value
+        // input Value store Objects
+        const addJobs = { email, Job_Title, Deadline, Description, Minimum_price, Maximum_price, category }
+        // console.log(addJobs)
+        fetch('http://localhost:5000/addJob', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(addJobs)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                if (data.insertedId) {
+                    Swal.fire({
+                        title: 'success!',
+                        text: 'Your job store Mongodb success!!',
+                        icon: 'success',
+                        confirmButtonText: 'Cool'
+                    })
+                }
+            })
+        // axios.post('http://localhost:5000/addJob', {
+        //     addJobs
+        // })
+        //     .then( (response) =>{
+        //         console.log(response);
+        //     })
+        //     .catch( (error)=> {
+        //         console.log(error);
+        //     })
+    }
     return (
         <div className=" ">
             <div>
                 <div >
-                    {/* <img className="relative w-full h-[400px] object-fill " src="https://i.ibb.co/WtGsczR/2-150.jpg" alt="" /> */}
-                    {/* <img className="relative w-full h-[400px] object-cover " src="https://i.ibb.co/183qZSG/2lyo-5omm-230125.jpg" alt="" /> */}
                     <img className=" w-full h-[400px] object-cover " src="https://i.ibb.co/kxFR03W/80-cm-Vtb3-Rl-X3dvcmtpbmct-MDg.jpg" alt="" />
                 </div>
-
             </div>
+            <p className=" md:text-3xl font-bold text-[#63B916] my-7">Add Jobs</p>
             {/* addJOb Form */}
+            <form onSubmit={handleAddJob} className="space-y-3 max-w-7xl mx-auto my-10">
 
-            <form onSubmit={''} className="space-y-3 max-w-7xl mx-auto my-10">
-                <p className=" md:text-3xl font-bold text-[#63B916] my-7">Add Jobs</p>
                 {/* first-row */}
                 <div className="flex gap-3">
                     <div className="form-control w-full">
@@ -57,7 +98,7 @@ const AddJob = () => {
                     <div className="form-control w-full">
                         <label className="input-group input-group-vertical">
                             <span className="bg-[#63B916] text-white font-bold">Maximum price</span>
-                            <input type="number" placeholder="Maximum_price" name="Maximum price" className="input input-bordered" />
+                            <input type="number" placeholder="Maximum_price" name="Maximum_price" className="input input-bordered" />
                         </label>
                     </div>
                 </div>
