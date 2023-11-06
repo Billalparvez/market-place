@@ -4,8 +4,8 @@ const Extra1 = () => {
     return (
         <div className="md:my-10">
             <div className="text-center space-y-3 mb-9">
-                <h1 className="text-3xl font-bold ">Kind Words From Our <br /> Happy <span className="text-[#63B916]">Candidates</span></h1>
-                <p>Aperiam the eaque ipsa quae abillo was inventore veritatis keret quasi aperiam architecto <br />
+                <h1  data-aos="fade-left" className="text-3xl font-bold ">Kind Words From Our <br /> Happy <span className="text-[#63B916]">Candidates</span></h1>
+                <p  data-aos="fade-down">Aperiam the eaque ipsa quae abillo was inventore veritatis keret quasi aperiam architecto <br />
                     beatae  explicabo. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
             </div>
             {/* <!-- Swiper --> */}
@@ -17,7 +17,7 @@ const Extra1 = () => {
                         {/* single-card */}
                         <div className="card bg-base-500  border-2 rounded-3xl">
                             <figure className="px-10 pt-10">
-                                <img src="https://i.postimg.cc/CLzGj6nx/3.jpg" alt="Shoes" className="rounded-full w-32 h-32 md:w-40 md:h-40 lg:w-64 lg:h-64 border-2 border-solid border-shadow-xl" />
+                                <img src="https://i.postimg.cc/CLzGj6nx/3.jpg" alt="Shoes" className=" rounded-full w-32 h-32 md:w-40 md:h-40 lg:w-64 lg:h-64 border-2 border-solid border-shadow-xl" />
                             </figure>
                             <div className="card-body items-center text-center">
                                 <h2 className="card-title hover:text-[#63B916]">Alex Smite!</h2>
