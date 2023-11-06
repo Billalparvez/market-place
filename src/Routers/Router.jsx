@@ -10,6 +10,7 @@ import MyBids from "../components/MyBids"
 import BidRequests from "../components/BidRequests"
 import AddJob from "../components/AddJob";
 import Register from "../pages/Register/Register";
+import Category from "../components/Category/Category";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -18,19 +19,19 @@ const router = createBrowserRouter([
     children: [
       {
         path: "myPost",
-        element:<MyPost></MyPost>
+        element: <MyPost></MyPost>
       },
       {
         path: "addJob",
-        element:<AddJob></AddJob>
+        element: <AddJob></AddJob>
       },
       {
         path: "myBids",
-        element:<MyBids></MyBids>
+        element: <MyBids></MyBids>
       },
       {
         path: "bidRequests",
-        element:<BidRequests></BidRequests>
+        element: <BidRequests></BidRequests>
       },
       {
         path: "/",
@@ -42,7 +43,11 @@ const router = createBrowserRouter([
       },
       {
         path: "register",
-        element:<Register></Register>
+        element: <Register></Register>
+      },
+      {
+        path: "/category",
+        element: <Category></Category>
       },
     ]
   },
