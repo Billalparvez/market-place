@@ -6,11 +6,11 @@ import Footer from "../components/Sheard/Footer/Footer"
 const Main = () => {
     return (
         <div>
-            {/* <div className="max-w-7xl mx-auto"> */}
+            <div className="bg-white">
                <Navbar></Navbar>
                 <Outlet></Outlet>
                 <Footer></Footer>
-            {/* </div> */}
+            </div>
         </div>
     );
 };

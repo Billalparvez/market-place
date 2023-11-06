@@ -11,6 +11,7 @@ import BidRequests from "../components/BidRequests"
 import AddJob from "../components/AddJob";
 import Register from "../pages/Register/Register";
 import Category from "../components/Category/Category";
+import JobDetails from "../components/JobDetails";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -35,7 +36,8 @@ const router = createBrowserRouter([
       },
       {
         path: "/",
-        element: <Home></Home>
+        element: <Home></Home>,
+        loader: () => fetch('http://localhost:5000/category')
       },
       {
         path: "login",
@@ -47,7 +49,14 @@ const router = createBrowserRouter([
       },
       {
         path: "/category",
-        element: <Category></Category>
+        element: <Category></Category>,
+        // loader:()=>fetch('http://localhost:5000/category')
+      },
+      {
+        path: '/jobDetails/:id',
+        element: <JobDetails></JobDetails>,
+        loader: ({params}) => fetch(`http://localhost:5000/category/${params.id}`)
+
       },
     ]
   },

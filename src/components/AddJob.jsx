@@ -16,7 +16,7 @@ const AddJob = () => {
         // input Value store Objects
         const addJobs = { email, Job_Title, Deadline, Description, Minimum_price, Maximum_price, category }
         // console.log(addJobs)
-        fetch('http://localhost:5000/addJob', {
+        fetch('http://localhost:5000/category', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -52,12 +52,12 @@ const AddJob = () => {
                     <img className=" w-full h-[400px] object-cover " src="https://i.ibb.co/kxFR03W/80-cm-Vtb3-Rl-X3dvcmtpbmct-MDg.jpg" alt="" />
                 </div>
             </div>
-            <p className=" md:text-3xl font-bold text-[#63B916] my-7">Add Jobs</p>
             {/* addJOb Form */}
             <form onSubmit={handleAddJob} className="space-y-3 max-w-7xl mx-auto my-10">
+                <p className=" md:text-3xl font-bold text-[#63B916] my-7">Add Jobs</p>
 
                 {/* first-row */}
-                <div className="flex gap-3">
+                <div className="flex flex-col md:flex-row gap-3">
                     <div className="form-control w-full">
                         <label className="input-group input-group-vertical">
                             <span className="bg-[#63B916] text-white font-bold">Employer Email</span>
@@ -72,7 +72,7 @@ const AddJob = () => {
                     </div>
                 </div>
                 {/* second-row  */}
-                <div className="flex gap-3">
+                <div className="flex flex-col md:flex-row gap-3">
                     <div className="form-control w-full">
                         <label className="input-group input-group-vertical">
                             <span className="bg-[#63B916] text-white font-bold">Deadline</span>
@@ -88,7 +88,7 @@ const AddJob = () => {
                     </div>
                 </div>
                 {/* thrred row */}
-                <div className="flex gap-3">
+                <div className="flex flex-col md:flex-row gap-3">
                     <div className="form-control w-full">
                         <label className="input-group input-group-vertical">
                             <span className="bg-[#63B916] text-white font-bold">Minimum price</span>

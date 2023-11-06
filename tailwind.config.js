@@ -8,9 +8,10 @@ export default {
   ],
   theme: [
     {
-      mytheme: {
-        "neutral": "#2b3440",
-      },
+    theme:[
+      "light",
+      "cupcake",
+    ]
     },
   ],
   plugins: [require("daisyui")],
