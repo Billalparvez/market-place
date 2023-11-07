@@ -1,8 +1,10 @@
 import axios from "axios";
+import { useNavigate } from "react-router";
 import Swal from "sweetalert2";
 
 
 const AddJob = () => {
+    const navigate=useNavigate()
     const handleAddJob = e => {
         e.preventDefault()
         const form = e.target
@@ -34,6 +36,7 @@ const AddJob = () => {
                         confirmButtonText: 'Cool'
                     })
                 }
+               navigate('/myPosted')
             })
         // axios.post('http://localhost:5000/addJob', {
         //     addJobs

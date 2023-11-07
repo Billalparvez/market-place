@@ -19,7 +19,7 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
-        path: "myPost",
+        path: "myPosted",
         element: <MyPost></MyPost>
       },
       {
@@ -50,7 +50,6 @@ const router = createBrowserRouter([
       {
         path: "/category",
         element: <Category></Category>,
-        // loader:()=>fetch('http://localhost:5000/category')
       },
       {
         path: '/jobDetails/:id',

@@ -1,12 +1,16 @@
+
+import toast, { Toaster } from "react-hot-toast";
+import { Link } from "react-router-dom";
+import { AiFillEye,AiFillEyeInvisible ,AiFillGithub,AiOutlineGoogle} from 'react-icons/ai';
 import { useContext, useState } from "react";
 import Swal from "sweetalert2";
 import { AuthContext } from "../../Provider/AuthProvider";
-import toast, { Toaster } from "react-hot-toast";
-import { Link } from "react-router-dom";
+
 
 
 const Login = () => {
-    const { singInUser, googleUser } = useContext(AuthContext)
+    // const { singInUser,googleUser } = useContext(AuthContext)
+    const {singInUser,googleUser}=useContext(AuthContext)
     const [passwordShow, setPasswordShow] = useState(false)
     const [loginError, setLoginError] = useState('')
     const handleLogin = (e) => {
@@ -19,7 +23,6 @@ const Login = () => {
         console.log(email, password)
         if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email)) {
             alert("Email NOt Match")
-
         }
         if (!checkBox) {
             toast.error("Must be selected box")

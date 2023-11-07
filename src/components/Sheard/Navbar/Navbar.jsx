@@ -1,18 +1,30 @@
 
+import { useContext } from "react";
 import "./Navbar.css";
-import { NavLink } from "react-router-dom"
+import { Link, NavLink } from "react-router-dom"
+import { AuthContext } from "../../../Provider/AuthProvider";
 // import Bannar from "../../Bannar"
 const Navbar = () => {
+    const { user, logOut } = useContext(AuthContext)
     const navLinks = <>
-
         <li> <NavLink to={'/'} >Home</NavLink></li>
         <li> <NavLink to={'/addJob'} >Add job</NavLink></li>
-        <li> <NavLink to={'/myBids'} >My Bids</NavLink></li>
-        <li> <NavLink to={'/myPost'} >My Post</NavLink></li>
-        <li> <NavLink to={'/bidRequests'}>Bid Requests</NavLink></li>
-        <li> <NavLink to={'/login'}>SingIn</NavLink></li>
+
         <li> <NavLink to={'/register'}>Register</NavLink></li>
+        {
+            user ?
+                <>
+                    <li> <NavLink to={'/myBids'} >My Bids</NavLink></li>
+                    <li> <NavLink to={'/myPosted'} >My Posted</NavLink></li>
+                    <li> <NavLink to={'/bidRequests'}>Bid Requests</NavLink></li>
+                </> : ""
+        }
     </>
+    const handleSingOut = () => {
+        logOut()
+            .then()
+            .catch()
+    }
     return (
 
         <div className="bg-white" >
@@ -37,10 +49,16 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    {/* <a className="btn">Button</a> */}
+                    {
+                        user ? <>
+                            <p>{user.displayName}</p>
+                            <p className="ml-3">{user.photoURL}</p>
+                            <p>{user.email}</p> 
+                            <NavLink className="ml-5" onClick={handleSingOut}>SingOut</NavLink>
+                        </> : <NavLink to={'/login'}>SingIn</NavLink>
+                    }
                 </div>
             </div>
-           
         </div>
     );
 }

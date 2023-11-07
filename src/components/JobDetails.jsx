@@ -1,11 +1,51 @@
 import moment from "moment";
-import { useLoaderData, useParams } from "react-router";
+import { useContext } from "react";
+
+import {  useLoaderData, useNavigate, useParams } from "react-router";
+import Swal from "sweetalert2";
+import { AuthContext } from "../Provider/AuthProvider";
 
 
 const JobDetails = () => {
+    const {user}=useContext(AuthContext)
+    console.log(user)
+    
+    const navigate = useNavigate()
     const { id } = useParams()
     const data = useLoaderData()
-    console.log(data,id)
+    console.log(data, id)
+    const handleMyBids = (e) => {
+        e.preventDefault()
+        const form = e.target
+        const user_Email = form.user_Email.value
+        const owner_Email = form.owner_Email.value
+        const Deadline = form.Deadline.value
+        const price = form.price.value
+        const myBids = { user_Email, owner_Email, price, Deadline }
+        console.log(myBids)
+        fetch('http://localhost:5000/myBids', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(myBids)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                if (data.insertedId) {
+                    Swal.fire({
+                        title: 'success!',
+                        text: 'Your Bids  Mongodb store success!!',
+                        icon: 'success',
+                        confirmButtonText: 'Cool'
+                    })
+                }
+
+                navigate('/myBids')
+            })
+
+    }
 
     return (
         <div className="max-w-7xl mx-auto">
@@ -31,20 +71,20 @@ const JobDetails = () => {
 
             <p className=" md:text-3xl font-bold text-[#63B916] my-7">Bid Form Section</p>
             {/* addJOb Form */}
-            <form onSubmit={''} className="space-y-3 max-w-7xl mx-auto my-10">
+            <form onSubmit={handleMyBids} className="space-y-3 max-w-7xl mx-auto my-10">
 
                 {/* first-row */}
                 <div className="flex flex-col md:flex-row gap-3">
                     <div className="form-control w-full">
                         <label className="input-group input-group-vertical">
                             <span className="bg-[#63B916] text-white font-bold">User_Email</span>
-                            <input type="text" name="user_Email" placeholder="User Email" className="input input-bordered" />
+                            <input type="text" name="user_Email" placeholder="User Email"  defaultValue={user.email} className="input input-bordered" />
                         </label>
                     </div>
                     <div className="form-control w-full">
                         <label className="input-group input-group-vertical">
                             <span className="bg-[#63B916] text-white font-bold"> Owner_Email</span>
-                            <input type="text" name="owner_Email" placeholder="Owner Email" className="input input-bordered" />
+                            <input type="text" name="owner_Email" placeholder={data.email} defaultValue={data.email} className="input input-bordered" />
                         </label>
                     </div>
                 </div>

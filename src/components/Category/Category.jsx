@@ -3,13 +3,13 @@ import { useLoaderData } from 'react-router';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import WebDevCart from './WebDevCart';
-import { useState } from 'react';
+// import { useState } from 'react';s
 
 const Category = () => {
-    const [webCategory, setWebCategory] = useState([])
-    console.log(webCategory)
+    // const [webCategory, setWebCategory] = useState([])
+    // console.log(webCategory)
     const data = useLoaderData()
-    // console.log(data)
+    console.log(data)
     return (
         <div className='my-20'>
             <div className='text-center mb-10'>
@@ -26,27 +26,30 @@ const Category = () => {
 
                 <TabPanel>
                     <h2>Any content 1</h2>
-                    {
-                        data && JSON.stringify(data.filter(d => d.category === "web development"))
-                    }
 
                     <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
                         {
-                            data?.map((category, idx) => <WebDevCart key={idx} category={category}></WebDevCart>)
+                            data?.filter(d => d.category === "web development").map((category, idx) => <WebDevCart key={idx} category={category}></WebDevCart>)
+                        }
+                    </div>
+
+                </TabPanel>
+                <TabPanel>
+                    <h2>Any content 2</h2>
+
+                    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
+                        {
+                            data?.filter(d => d.category === "digital marketing").map((category, idx) => <WebDevCart key={idx} category={category}></WebDevCart>)
                         }
                     </div>
                 </TabPanel>
                 <TabPanel>
-                    <h2>Any content 2</h2>
-                    {
-                        data && JSON.stringify(data.filter(d => d.category === "digital marketing"))
-                    }
-                </TabPanel>
-                <TabPanel>
                     <h2>Any content 3</h2>
-                    {
-                        data && JSON.stringify(data.filter(d => d.category === "graphics design"))
-                    }
+                    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
+                        {
+                            data?.filter(d => d.category === "graphics design").map((category, idx) => <WebDevCart key={idx} category={category}></WebDevCart>)
+                        }
+                    </div>
                 </TabPanel>
             </Tabs>
 
