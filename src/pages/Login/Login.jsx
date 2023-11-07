@@ -1,6 +1,6 @@
 
 import toast, { Toaster } from "react-hot-toast";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AiFillEye,AiFillEyeInvisible ,AiFillGithub,AiOutlineGoogle} from 'react-icons/ai';
 import { useContext, useState } from "react";
 import Swal from "sweetalert2";
@@ -13,6 +13,7 @@ const Login = () => {
     const {singInUser,googleUser}=useContext(AuthContext)
     const [passwordShow, setPasswordShow] = useState(false)
     const [loginError, setLoginError] = useState('')
+    const navigate=useNavigate()
     const handleLogin = (e) => {
         e.preventDefault()
         const form = new FormData(e.currentTarget)
@@ -37,6 +38,7 @@ const Login = () => {
                     icon: 'success',
                     confirmButtonText: 'Cool'
                 })
+                navigate('/')
             })
             .catch(error => {
                 console.log(error)

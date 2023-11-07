@@ -1,9 +1,12 @@
 import axios from "axios";
+import { useContext } from "react";
 import { useNavigate } from "react-router";
 import Swal from "sweetalert2";
+import { AuthContext } from "../Provider/AuthProvider";
 
 
 const AddJob = () => {
+    const {user}=useContext(AuthContext)
     const navigate=useNavigate()
     const handleAddJob = e => {
         e.preventDefault()
@@ -38,15 +41,7 @@ const AddJob = () => {
                 }
                navigate('/myPosted')
             })
-        // axios.post('http://localhost:5000/addJob', {
-        //     addJobs
-        // })
-        //     .then( (response) =>{
-        //         console.log(response);
-        //     })
-        //     .catch( (error)=> {
-        //         console.log(error);
-        //     })
+
     }
     return (
         <div className=" ">
@@ -64,7 +59,7 @@ const AddJob = () => {
                     <div className="form-control w-full">
                         <label className="input-group input-group-vertical">
                             <span className="bg-[#63B916] text-white font-bold">Employer Email</span>
-                            <input type="text" name="email" placeholder="Employer Email" className="input input-bordered" />
+                            <input type="text" name="email" value={user.email} readOnly placeholder="Employer Email" className="input input-bordered" />
                         </label>
                     </div>
                     <div className="form-control w-full">
@@ -79,7 +74,8 @@ const AddJob = () => {
                     <div className="form-control w-full">
                         <label className="input-group input-group-vertical">
                             <span className="bg-[#63B916] text-white font-bold">Deadline</span>
-                            <input type="text" placeholder="Deadline" name="Deadline" className="input input-bordered" />
+                            {/* <input type="text" placeholder="Deadline" name="Deadline" className="input input-bordered" /> */}
+                            <input type="date"  placeholder="Deadline" className="input input-bordered" name="Deadline" id="" />
                         </label>
                     </div>
                     <div className="form-control w-full">

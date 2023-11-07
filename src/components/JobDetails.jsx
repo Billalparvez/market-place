@@ -43,7 +43,7 @@ const JobDetails = () => {
                     })
                 }
 
-                navigate('/myPosted')
+                navigate('/myBids')
             })
 
     }
@@ -79,13 +79,13 @@ const JobDetails = () => {
                     <div className="form-control w-full">
                         <label className="input-group input-group-vertical">
                             <span className="bg-[#63B916] text-white font-bold">User_Email</span>
-                            <input type="text" name="user_Email" placeholder="User Email"  defaultValue={user.email} className="input input-bordered" />
+                            <input type="text" name="user_Email" placeholder="User Email"  value={user.email} readOnly className="input input-bordered" />
                         </label>
                     </div>
                     <div className="form-control w-full">
                         <label className="input-group input-group-vertical">
                             <span className="bg-[#63B916] text-white font-bold"> Owner_Email</span>
-                            <input type="text" name="owner_Email" placeholder={data.email} defaultValue={data.email} className="input input-bordered" />
+                            <input type="text" name="owner_Email" placeholder={data.email} value={data.email} readOnly className="input input-bordered" />
                         </label>
                     </div>
                 </div>
@@ -94,7 +94,8 @@ const JobDetails = () => {
                     <div className="form-control w-full">
                         <label className="input-group input-group-vertical">
                             <span className="bg-[#63B916] text-white font-bold">Deadline</span>
-                            <input type="text" placeholder="Deadline" name="Deadline" className="input input-bordered" />
+                            {/* <input type="text" placeholder="Deadline" name="Deadline" className="input input-bordered" /> */}
+                            <input type="date" placeholder="Deadline" name="Deadline" className="input input-bordered" id="" />
                         </label>
                     </div>
                     <div className="form-control w-full">
