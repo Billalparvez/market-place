@@ -20,18 +20,19 @@ const router = createBrowserRouter([
     children: [
       {
         path: "myPosted",
-        element: <MyPost></MyPost>
+        element: <MyPost></MyPost>,
+        loader:()=>fetch('http://localhost:5000/myBids')
       },
       {
-        path: "addJob",
+        path: "/addJob",
         element: <AddJob></AddJob>
       },
       {
-        path: "myBids",
-        element: <MyBids></MyBids>
+        path: "/myBids",
+        element: <MyBids></MyBids>     
       },
       {
-        path: "bidRequests",
+        path: "/bidRequests",
         element: <BidRequests></BidRequests>
       },
       {

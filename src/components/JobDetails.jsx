@@ -13,6 +13,7 @@ const JobDetails = () => {
     const navigate = useNavigate()
     const { id } = useParams()
     const data = useLoaderData()
+    const name=data.Job_Title
     console.log(data, id)
     const handleMyBids = (e) => {
         e.preventDefault()
@@ -21,7 +22,7 @@ const JobDetails = () => {
         const owner_Email = form.owner_Email.value
         const Deadline = form.Deadline.value
         const price = form.price.value
-        const myBids = { user_Email, owner_Email, price, Deadline }
+        const myBids = { user_Email, owner_Email, price, Deadline,name }
         console.log(myBids)
         fetch('http://localhost:5000/myBids', {
             method: 'POST',
@@ -42,7 +43,7 @@ const JobDetails = () => {
                     })
                 }
 
-                navigate('/myBids')
+                navigate('/myPosted')
             })
 
     }

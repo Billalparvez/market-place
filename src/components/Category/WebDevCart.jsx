@@ -4,7 +4,7 @@ const WebDevCart = ({ category }) => {
     const {_id, Job_Title, Deadline, Maximum_price, Minimum_price, Description } = category
     return (
         <div>
-            <div className="card w-96 bg-base-100 shadow-xl">
+            <div className="card  bg-base-100 shadow-xl">
                 <div className="card-body">
                     <h2 className="card-title">{Job_Title}!</h2>
                     <p>{Deadline}</p>
