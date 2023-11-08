@@ -1,18 +1,21 @@
+import { useContext } from "react";
 import { useEffect } from "react";
 import { useState } from "react";
-// import { AuthContext } from "../Provider/AuthProvider";
+import { AuthContext } from "../../Provider/AuthProvider";
+// import { useLoaderData } from "react-router";
+// import BidsTab from "./BidsTab";
+const MyBids = () => {
+    const { user } = useContext(AuthContext)
+    // const datas = useLoaderData()
+    const [bids, setBids] = useState([])
 
-const BidRequests = () => {
-    // const { user } = useContext(AuthContext)
-    const [request, SetRequest] = useState([])
-    console.log(request)
-
-    const url = `http://localhost:5000/myBids?owner_Email=${request?.owner_Email}`
+    const url = `http://localhost:5000/myBids?email=${user?.email}`
     useEffect(() => {
         fetch(url)
             .then(res => res.json())
-            .then(data => SetRequest(data))
+            .then(data => setBids(data))
     }, [url])
+    // console.log(datas)
     return (
         <div className="max-w-7xl mx-auto">
             <div className="overflow-x-auto">
@@ -24,19 +27,17 @@ const BidRequests = () => {
                             <th>Date</th>
                             <th>Status</th>
                             <th>button</th>
-                            <th>button</th>
                         </tr>
                     </thead>
                     {
-                        request.map((data, idx) =>
-                            <thead key={idx}>
+                        bids.map(data =>
+                            <thead key={data.id}>
                                 <tr>
                                     <th>{data.name}</th>
                                     <td>{data.user_Email}</td>
                                     <td>{data.Deadline}</td>
-                                    <td>{data.status}</td>
-                                    <td><button className="btn btn-outline">Accept</button></td>
-                                    <td><button className="btn btn-outline">Reject</button></td>
+                                    <td>padding</td>
+                                    <button className="btn btn-sm btn-outline">completed</button>
                                 </tr>
                             </thead>
                         )
@@ -47,4 +48,4 @@ const BidRequests = () => {
     );
 };
 
-export default BidRequests;
+export default MyBids;

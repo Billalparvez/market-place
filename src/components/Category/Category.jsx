@@ -17,7 +17,7 @@ const Category = () => {
                 <p>Aperiam the eaque ipsa quae abillo was inventore veritatis keret quasi aperiam architecto <br />
                     beatae explicabo. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
             </div>
-            <Tabs >
+            <Tabs>
                 <TabList>
                     <Tab>Web Development</Tab>
                     <Tab>Digital Marketing</Tab>

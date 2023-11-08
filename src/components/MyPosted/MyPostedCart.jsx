@@ -6,43 +6,13 @@ import { AuthContext } from "../../Provider/AuthProvider";
 import { useNavigate } from "react-router";
 
 
-const MyPostedCart = ({ myPost,data }) => {
+const MyPostedCart = ({ myPost,data,handlDelete }) => {
     const { user } = useContext(AuthContext)
     const navigate=useNavigate()
     const { _id, Deadline, email, Maximum_price,category, Minimum_price,Job_Title, } = myPost
-    const [postCart, setPostCart] = useState([])
+    
     // console.log(data)
-    // delete
-    const handlDelete = (id) => {
-        console.log(id)
-        Swal.fire({
-            title: 'Are you sure?',
-            text: "You won't be able to revert this!",
-            icon: 'warning',
-            showCancelButton: true,
-            confirmButtonColor: '#3085d6',
-            cancelButtonColor: '#d33',
-            confirmButtonText: 'Yes, delete it!'
-        })
-
-        fetch(`http://localhost:5000/category/${_id}`, {
-            method: 'DELETE'
-        })
-            .then(res => res.json())
-            .then(data => {
-                console.log(data)
-                if (data.deletedCount > 0) {
-                    Swal.fire(
-                        'Deleted!',
-                        'Your file has been deleted.',
-                        'success'
-                    )
-                    // remove brand
-                    const remaining = postCart.filter(post => post._id !== id)
-                    setPostCart(remaining)
-                }
-            })
-    }
+   
     // update
     const handlUpdate = (e) => {
         e.preventDefault()
