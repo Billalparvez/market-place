@@ -13,8 +13,8 @@ const Category = () => {
     return (
         <div className='my-20'>
             <div className='text-center mb-10'>
-                <h1 className='text-3xl'>Browse By Category</h1>
-                <p>Aperiam the eaque ipsa quae abillo was inventore veritatis keret quasi aperiam architecto <br />
+                <h1 data-aos="fade-down" className='text-3xl font-bold'>Browse By <span className='text-[#63B916]'>Category</span></h1>
+                <p data-aos="fade-right">Aperiam the eaque ipsa quae abillo was inventore veritatis keret quasi aperiam architecto <br />
                     beatae explicabo. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
             </div>
             <Tabs>
@@ -25,7 +25,7 @@ const Category = () => {
                 </TabList>
 
                 <TabPanel>
-                    <h2>Any content 1</h2>
+                  
 
                     <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
                         {
@@ -35,7 +35,7 @@ const Category = () => {
 
                 </TabPanel>
                 <TabPanel>
-                    <h2>Any content 2</h2>
+                 
 
                     <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
                         {
@@ -44,7 +44,7 @@ const Category = () => {
                     </div>
                 </TabPanel>
                 <TabPanel>
-                    <h2>Any content 3</h2>
+ 
                     <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
                         {
                             data?.filter(d => d.category === "graphics design").map((category, idx) => <WebDevCart key={idx} category={category}></WebDevCart>)

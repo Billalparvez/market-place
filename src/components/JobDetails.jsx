@@ -1,19 +1,19 @@
 import moment from "moment";
 import { useContext } from "react";
 
-import {  useLoaderData, useNavigate, useParams } from "react-router";
+import { useLoaderData, useNavigate, useParams } from "react-router";
 import Swal from "sweetalert2";
 import { AuthContext } from "../Provider/AuthProvider";
 
 
 const JobDetails = () => {
-    const {user}=useContext(AuthContext)
+    const { user } = useContext(AuthContext)
     console.log(user)
-    
+
     const navigate = useNavigate()
     const { id } = useParams()
     const data = useLoaderData()
-    const name=data.Job_Title
+    const name = data.Job_Title
     console.log(data, id)
     const handleMyBids = (e) => {
         e.preventDefault()
@@ -22,7 +22,7 @@ const JobDetails = () => {
         const owner_Email = form.owner_Email.value
         const Deadline = form.Deadline.value
         const price = form.price.value
-        const myBids = { user_Email, owner_Email, price, Deadline,name }
+        const myBids = { user_Email, owner_Email, price, Deadline, name }
         console.log(myBids)
         fetch('http://localhost:5000/myBids', {
             method: 'POST',
@@ -69,8 +69,10 @@ const JobDetails = () => {
 
                 </div>
             </div>
-
             <p className=" md:text-3xl font-bold text-[#63B916] my-7">Bid Form Section</p>
+
+
+
             {/* addJOb Form */}
             <form onSubmit={handleMyBids} className="space-y-3 max-w-7xl mx-auto my-10">
 
@@ -79,7 +81,7 @@ const JobDetails = () => {
                     <div className="form-control w-full">
                         <label className="input-group input-group-vertical">
                             <span className="bg-[#63B916] text-white font-bold">User_Email</span>
-                            <input type="text" name="user_Email" placeholder="User Email"  value={user.email} readOnly className="input input-bordered" />
+                            <input type="text" name="user_Email" placeholder="User Email" value={user.email} readOnly className="input input-bordered" />
                         </label>
                     </div>
                     <div className="form-control w-full">
