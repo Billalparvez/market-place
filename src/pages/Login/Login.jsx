@@ -9,7 +9,7 @@ import { AuthContext } from "../../Provider/AuthProvider";
 
 
 const Login = () => {
-    // const { singInUser,googleUser } = useContext(AuthContext)
+
     const {singInUser,googleUser}=useContext(AuthContext)
     const [passwordShow, setPasswordShow] = useState(false)
     const [loginError, setLoginError] = useState('')

@@ -1,7 +1,5 @@
 
 
-
-
 * projects feather
 * You can apply for jobs.
 * You Can see all our jobs according to category.

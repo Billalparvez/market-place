@@ -17,21 +17,22 @@ const Register = () => {
         const form = new FormData(e.currentTarget)
         const email = form.get("email");
         const password = form.get("password");
-        console.log(email, password,)
+        const photo_Url = form.get("photo_Url");
+        console.log(email, password,photo_Url)
         setSuccess("")
         setRegError("")
-        // if (password.length < 6) {
-        //     toast.error("password must be 6 cherecter")
-        //     return
-        // }
-        // else if (!/[a-z]/.test(password)) {
-        //     toast.error("must be capital letter")
-        //     return
-        // }
-        // if (!/[/e.g., !, @, #, $, %, etc./]/.test(password)) {
-        //     toast.error("password must be special charecter")
-        //     return
-        // }
+        if (password.length < 6) {
+            toast.error("password must be 6 cherecter")
+            return
+        }
+        else if (!/[a-z]/.test(password)) {
+            toast.error("must be capital letter")
+            return
+        }
+        if (!/[/e.g., !, @, #, $, %, etc./]/.test(password)) {
+            toast.error("password must be special charecter")
+            return
+        }
 
         createUser(email, password)
             .then(res => {
@@ -70,6 +71,13 @@ const Register = () => {
                             <input type="text"
                                 placeholder="Enter Your Name"
                                 name="name"
+                                className="input rounded-3xl
+                      input-bordered " required />
+                        </div>
+                        <div className="form-control">
+                            <input type="photo_Url"
+                                placeholder="photo_Url"
+                                name="photo_Url"
                                 className="input rounded-3xl
                       input-bordered " required />
                         </div>
