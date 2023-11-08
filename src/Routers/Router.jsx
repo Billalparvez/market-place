@@ -26,7 +26,8 @@ const router = createBrowserRouter([
       },
       {
         path:"myPosted",
-        element:<MyPosted></MyPosted>
+        element:<MyPosted></MyPosted>,
+        loader: () => fetch('http://localhost:5000/category')
       },
       {
         path: "/addJob",

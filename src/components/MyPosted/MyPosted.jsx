@@ -3,12 +3,16 @@ import { AuthContext } from "../../Provider/AuthProvider";
 import { useState } from "react";
 import { useEffect } from "react";
 import MyPostedCart from "./MyPostedCart";
+import { useLoaderData } from "react-router";
 
 
 const MyPosted = () => {
+    const data=useLoaderData()
+    console.log(data)
+
     const { user } = useContext(AuthContext)
+    console.log(user)
     const [post, setPost] = useState([])
-    // console.log(post)
     const url = `http://localhost:5000/category?email=${user.email}`
     useEffect(() => {
         fetch(url)
@@ -19,7 +23,10 @@ const MyPosted = () => {
         <div>
             {
                 post.map((myPost, idx) =>
-                    <MyPostedCart key={idx} myPost={myPost}>
+                    <MyPostedCart
+                     key={idx}
+                     data={data}
+                      myPost={myPost}>
                     </MyPostedCart>)
             }
         </div>
