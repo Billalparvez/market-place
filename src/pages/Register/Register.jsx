@@ -66,7 +66,7 @@ const Register = () => {
                 <div className="hero-overlay bg-opacity-60"></div>
                 <div className="card flex w-full max-w-lg shadow-2xl bg-base-100">
                     <form onSubmit={handleRegister} className="card-body">
-                        <h1 className='font-bold mb-5'>Create an Account</h1>
+                        <h1 className='font-bold mb-5 text-[#63B916] '>Create an Account</h1>
                         <div className="form-control">
                             <input type="text"
                                 placeholder="Enter Your Name"
@@ -102,7 +102,7 @@ const Register = () => {
                             </p>
                         </div>
                         <div className="form-control mt-6">
-                            <button className="btn btn-info text-white rounded-3xl">Create an Account
+                            <button className="btn btn-info text-white rounded-3xl bg-[#63B916] border-none">Create an Account
                                 <Link to={"/"}></Link>
                             </button>
                             < Toaster />
@@ -114,7 +114,7 @@ const Register = () => {
                                 <a onClick={""} className='border p-5 rounded-2xl text-2xl' ><AiFillGithub></AiFillGithub></a>
                             </div>
                         </div>
-                        <p className='text-center font-bold text-sm'>Do not Have An Account ?<Link className='text-sky-400' to={'/login'}> Login</Link></p>
+                        <p className='text-center font-bold text-sm'>Do not Have An Account ?<Link className=' text-[#63B916] ' to={'/login'}> Login</Link></p>
                     </form>
                     {
                         regError && toast.error(regError)

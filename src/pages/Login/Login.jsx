@@ -57,7 +57,7 @@ const Login = () => {
                 <div className="hero-overlay bg-opacity-60"></div>
                 <div className="card flex w-full max-w-lg shadow-2xl bg-base-100">
                     <form onSubmit={handleLogin} className="card-body">
-                        <h1 className='font-bold mb-5'>LOgin</h1>
+                        <h1 className='font-bold mb-5 text-[#63B916] '>LOgin</h1>
                         <div className="form-control">
                             <input type="email"
                                 placeholder="Enter Your Email"
@@ -78,7 +78,7 @@ const Login = () => {
                                     <label htmlFor="">Remember Me<a href=""></a></label>
                                 </div>
                                 <label className="label">
-                                    <a href="#" className="text-info label-text-alt link link-hover">Forgot password?</a>
+                                    <a href="#" className=" label-text-alt link link-hover text-[#63B916] ">Forgot password?</a>
                                 </label>
                             </div>
                             <p className='text-xl absolute top-[155px] right-12 ' onClick={() => setPasswordShow(!passwordShow)}>
@@ -86,7 +86,7 @@ const Login = () => {
                             </p>
                         </div>
                         <div className="form-control mt-6">
-                            <button className="btn btn-info text-white rounded-3xl">Login
+                            <button className="btn btn-info text-white bg-[#63B916] border-none rounded-3xl">Login
                             </button>
                             < Toaster />
                         </div>
@@ -97,7 +97,7 @@ const Login = () => {
                                 <a onClick={""} className='border p-5 rounded-2xl text-2xl' ><AiFillGithub></AiFillGithub></a>
                             </div>
                         </div>
-                        <p className='text-center font-bold text-sm'>Do not Have An Account ?<Link className='text-sky-400' to={'/register'}> Register Now</Link></p>
+                        <p className='text-center font-bold text-sm'>Do not Have An Account ?<Link className='text-[#63B916] ' to={'/register'}> Register Now</Link></p>
                     </form>
                     {
                         loginError && <p className='text-red-500 font-bold'>{loginError}</p>
