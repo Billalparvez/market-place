@@ -97,7 +97,7 @@ const Register = () => {
                                 required />
                             <div className='flex mt-3 justify-between items-center'>
                             </div>
-                            <p className='text-xl absolute top-[210px] right-12 ' onClick={() => setPasswordShow(!passwordShow)}>
+                            <p className='text-xl absolute top-[264px] right-12 ' onClick={() => setPasswordShow(!passwordShow)}>
                                 {passwordShow ? <AiFillEye></AiFillEye> : <AiFillEyeInvisible></AiFillEyeInvisible>}
                             </p>
                         </div>

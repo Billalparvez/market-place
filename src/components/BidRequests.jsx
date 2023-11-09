@@ -5,14 +5,17 @@ import { useState } from "react";
 const BidRequests = () => {
     // const { user } = useContext(AuthContext)
     const [request, SetRequest] = useState([])
-    console.log(request)
+    console.log("token",request)
 
-    const url = `http://localhost:5000/myBids?owner_Email=${request?.owner_Email}`
+    
     useEffect(() => {
+       if(request?.owner_Email){
+        const url = `https://online-marketplace-flame.vercel.app/myBids?owner_Email=${request?.owner_Email}`
         fetch(url)
             .then(res => res.json())
             .then(data => SetRequest(data))
-    }, [url])
+       }
+    }, [request?.owner_Email])
     return (
         <div className="max-w-7xl mx-auto">
             <div className="overflow-x-auto">

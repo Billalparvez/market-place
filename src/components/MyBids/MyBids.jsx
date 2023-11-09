@@ -9,9 +9,11 @@ const MyBids = () => {
     // const datas = useLoaderData()
     const [bids, setBids] = useState([])
 
-    const url = `http://localhost:5000/myBids?email=${user?.email}`
+    const url = `https://online-marketplace-flame.vercel.app/myBids?email=${user?.email}`
     useEffect(() => {
-        fetch(url)
+        fetch(url,
+            {credentials:"include"}
+            )
             .then(res => res.json())
             .then(data => setBids(data))
     }, [url])

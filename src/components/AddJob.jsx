@@ -1,4 +1,4 @@
-import axios from "axios";
+
 import { useContext } from "react";
 import { useNavigate } from "react-router";
 import Swal from "sweetalert2";
@@ -21,7 +21,7 @@ const AddJob = () => {
         // input Value store Objects
         const addJobs = { email, Job_Title, Deadline, Description, Minimum_price, Maximum_price, category }
         // console.log(addJobs)
-        fetch('http://localhost:5000/category', {
+        fetch('https://online-marketplace-flame.vercel.app/category', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -47,7 +47,7 @@ const AddJob = () => {
         <div className=" ">
             <div>
                 <div >
-                    <img className=" w-full h-[400px] object-cover " src="https://i.ibb.co/kxFR03W/80-cm-Vtb3-Rl-X3dvcmtpbmct-MDg.jpg" alt="" />
+                    <img className=" w-full h-[400px]  " src="https://i.postimg.cc/5tJ78K3h/14305.jpg" alt="" />
                 </div>
             </div>
             {/* addJOb Form */}

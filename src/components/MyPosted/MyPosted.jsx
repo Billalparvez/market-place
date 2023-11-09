@@ -14,7 +14,7 @@ const MyPosted = () => {
     console.log(data)
     const { user } = useContext(AuthContext)
     console.log(user)
-    const url = `http://localhost:5000/category?email=${user.email}`
+    const url = `https://online-marketplace-flame.vercel.app/category?email=${user.email}`
     useEffect(() => {
         fetch(url)
             .then(res => res.json())
@@ -33,7 +33,7 @@ const MyPosted = () => {
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if(result.isConfirmed){
-                fetch(`http://localhost:5000/category/${_id}`, {
+                fetch(`https://online-marketplace-flame.vercel.app/category/${_id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())

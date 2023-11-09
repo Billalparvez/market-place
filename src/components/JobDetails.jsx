@@ -24,7 +24,7 @@ const JobDetails = () => {
         const price = form.price.value
         const myBids = { user_Email, owner_Email, price, Deadline, name }
         console.log(myBids)
-        fetch('http://localhost:5000/myBids', {
+        fetch('https://online-marketplace-flame.vercel.app/myBids', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

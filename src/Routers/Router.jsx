@@ -23,7 +23,7 @@ const router = createBrowserRouter([
       {
         path:"myPosted",
         element:<PrivateRoute><MyPosted></MyPosted></PrivateRoute>,
-        loader: () => fetch('http://localhost:5000/category')
+        loader: () => fetch('https://online-marketplace-flame.vercel.app/category')
       },
       {
         path: "/addJob",
@@ -40,7 +40,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch('http://localhost:5000/category')
+        loader: () => fetch('https://online-marketplace-flame.vercel.app/category')
       },
       {
         path: "login",
@@ -57,7 +57,7 @@ const router = createBrowserRouter([
       {
         path: '/jobDetails/:id',
         element: <PrivateRoute><JobDetails></JobDetails></PrivateRoute>,
-        loader: ({params}) => fetch(`http://localhost:5000/category/${params.id}`)
+        loader: ({params}) => fetch(`https://online-marketplace-flame.vercel.app/category/${params.id}`)
 
       },
     ]

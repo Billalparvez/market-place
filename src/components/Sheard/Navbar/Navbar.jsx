@@ -53,7 +53,7 @@ const Navbar = () => {
                         user ? <>
                             <p>{user.displayName}</p>
                             <p className="ml-3">{user.photoURL}</p>
-                            {/* <p>{user.email}</p>  */}
+                            <p>{user.email}</p> 
                             <NavLink className="ml-5" onClick={handleSingOut}>SingOut</NavLink>
                         </> : <NavLink to={'/login'}>SingIn</NavLink>
                     }

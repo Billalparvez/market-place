@@ -26,7 +26,7 @@ const MyPostedCart = ({ myPost,data,handlDelete }) => {
         const category = form.category.value
         // input Value store Objects
         const update = { email, Job_Title, Deadline, Description, Minimum_price, Maximum_price, category }
-        fetch(`http://localhost:5000/category/${_id}`,{
+        fetch(`https://online-marketplace-flame.vercel.app/category/${_id}`,{
             method:'PUT',
             headers: {
                 'content-type': 'application/json'
